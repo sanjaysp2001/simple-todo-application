@@ -168,16 +168,20 @@ input[type="checkbox"] {
 
     input[type="checkbox"] {
         top: 30%;
-        right: 25%;
+        right: 30%;
     }
 
     .close {
         top: 0.5%;
     }
 
+    .close:hover{
+        background-color: transparent ;
+    }
+
     .edit{
         top: 20%;
-        right: 12%;
+        right: 15%;
     }
 
     #inp{
