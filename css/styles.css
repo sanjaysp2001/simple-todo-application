@@ -167,7 +167,7 @@ input[type="checkbox"] {
     }
 
     input[type="checkbox"] {
-        top: 32%;
+        top: 30%;
         right: 25%;
     }
 
@@ -176,7 +176,8 @@ input[type="checkbox"] {
     }
 
     .edit{
-        right: 12%
+        top: 20%;
+        right: 12%;
     }
 
     #inp{
