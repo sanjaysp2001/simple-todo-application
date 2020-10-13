@@ -10,6 +10,10 @@ h1 {
     text-shadow: black 2px 2px 3px;
 }
 
+p{
+    font-size: 1.2em;
+}
+
 ul {
     list-style-type: none;
     padding-right: 100px;
@@ -30,7 +34,7 @@ li {
 input[type="checkbox"] {
     position: absolute;
     top: 12px;
-    right: 100px;
+    right: 10%;
 }
 
 
@@ -57,7 +61,7 @@ input[type="checkbox"] {
     text-align: center;
     position: absolute;
     top: 12px;
-    right: 50px;
+    right: 4%;
 }
 
 .edit:hover {
@@ -71,7 +75,7 @@ input[type="checkbox"] {
     width: 40px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 0%;
     font-size: 30px;
 }
 
@@ -114,7 +118,19 @@ input[type="checkbox"] {
     }
 
     .close{
-        top: 7px;
+        top: 0px;
+        right: 0%;
+        line-height: 55px;
+    }
+    .close:hover{
+        height: 100%;
+        line-height: 55px;
+
+    }
+
+    .edit{
+        top: 10px;
+        right: 11%;
     }
 
     input[type="checkbox"]{
