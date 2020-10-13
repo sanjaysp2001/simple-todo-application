@@ -1,3 +1,4 @@
+/* Genral CSS Properties */
 body {
     font-family: 'Secular One', sans-serif;
     text-align: center;
@@ -11,7 +12,7 @@ h1 {
 }
 
 p{
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 ul {
@@ -29,6 +30,7 @@ li {
     text-align: left;
     margin: 15px 0px 15px 15px;
     padding: 10px;
+    font-size: 1.2em;
 }
 
 input[type="checkbox"] {
@@ -104,8 +106,10 @@ input[type="checkbox"] {
 
 
 /*Media Queries*/
+/* medium devices */
 
-@media (max-width:768px){
+/* small devices */
+@media (min-width:768px) and (max-width:991px){
     p{
         font-size:1.5em;
     }
@@ -130,12 +134,12 @@ input[type="checkbox"] {
 
     .edit{
         top: 10px;
-        right: 11%;
+        right: 8%;
     }
 
     input[type="checkbox"]{
         top: 19px;
-        right: 28%;
+        right: 20%;
     }
     #inp{
         height: 50px;
@@ -145,4 +149,43 @@ input[type="checkbox"] {
         width: 40px;
         padding: 5px;
     }
+}
+
+/* Extra small devices */
+
+@media (min-width: 320px) and (max-width: 767px){
+
+    body{
+        font-size: 1.2em;
+    }
+    ul{
+        padding-left: 0%;
+        padding-right: 5%;
+    }
+    li{
+        font-size: 1em;
+    }
+
+    input[type="checkbox"] {
+        top: 30%;
+        right: 23%;
+    }
+
+    .close {
+        top: 0%;
+    }
+
+    .edit{
+        right: 10%
+    }
+
+    #inp{
+        height: 50px;
+    }
+    #btn{
+        height: 56px;
+        width: 40px;
+        padding: 5px;
+    }
+}
 }
