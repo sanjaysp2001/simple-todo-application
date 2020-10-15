@@ -15,13 +15,15 @@ function addItem() {
 
     //Creating a list element
     var li = document.createElement("li");
+    var des_span = document.createElement("span");
     var des = document.createTextNode(todo_item.description);
     li.value = val;
     //Making the input element empty
     document.querySelector("#inp").value = "";
-    li.appendChild(des);
+    des_span.appendChild(des);
+    des_span.className = "task";
+    li.appendChild(des_span);
     li.id = todo_list.length - 1;
-    console.log(li.id);
 
     //Animation effects
     setTimeout(function() {
@@ -56,7 +58,7 @@ function addItem() {
     span.addEventListener("click", deleteItem, false);
     edit.addEventListener("click", editItem, false);
     checkbox.addEventListener("change", changeStatus, false);
-
+    des_span.addEventListener("click",alertTask,false);
     //Shift the focus to the input after adding the item
     document.querySelector("#inp").focus();
     console.log(todo_list);
@@ -105,11 +107,14 @@ function editItem() {
             //After editing the item..
             button.innerHTML = "Add";
             if (inputText.value != '') {
+                var new_span = document.createElement("span");
                 var newInputText = document.createTextNode(inputText.value);
+                new_span.appendChild(newInputText);
+                new_span.className = "task";
                 todo_list[item.id].description = inputText.value;
 
                 //replace the list text with new Text
-                listitem.childNodes[0].replaceWith(newInputText);
+                listitem.childNodes[0].replaceWith(new_span);
                 button.onclick = addItem;
                 inputText.value = '';
                 item.status = 'incomplete'
@@ -117,6 +122,10 @@ function editItem() {
             } else {
                 var ul = listitem.parentNode;
                 ul.removeChild(listitem);
+                 var task_length = document.getElementById("listItem").getElementsByTagName("li").length;
+                 for( var i=0;i<task_length;i++){
+                     document.getElementsByTagName("li")[i].id = i;
+                 }
                 alert("Task Deleted!");
             }
         };
@@ -155,6 +164,11 @@ function changeStatus() {
         }
 }
 
+function alertTask(){
+        var alert_list = this.parentNode;
+        alert(todo_list[alert_list.id].description);
+
+}
 //When pressing "enter" key,the button behavior is based on the status of the task
 var button_action =document.getElementById("btn");
 document.getElementById("inp").addEventListener("keyup",function(event){
