@@ -39,12 +39,6 @@ input[type="checkbox"] {
     right: 10%;
 }
 
-
-.put-tick::before {
-    content: "✓";
-}
-
-
 .container {
     padding: 10px;
 }
@@ -194,7 +188,7 @@ input[type="checkbox"] {
     }
 
     .task{
-        max-width: 13ch;
+        max-width: 12ch;
     }
     #inp{
         height: 50px;

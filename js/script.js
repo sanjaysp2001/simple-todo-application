@@ -148,18 +148,17 @@ function editItem() {
 // To mark an item as complete or incomplete
 function changeStatus() {
     var items = this.parentNode;
-    var task_description = document.getElementById(items.id);
+    var task_description = document.getElementsByClassName("task");
     var check = document.getElementsByClassName("checkbox-status");
         if (check[items.id].checked) {
-            items.className = items.className + " " + "put-tick";
             todo_list[items.id].status = "complete";
-            task_description.style.textDecoration = "line-through";
+            task_description[items.id].style.textDecoration = "line-through";
             console.log(todo_list[items.id].status);
 
         } else {
             items.className = "show"; //Setting back to the previous state
             todo_list[items.id].status = "incomplete";
-            task_description.style.textDecoration = "none";
+            task_description[items.id].style.textDecoration = "none";
             console.log(todo_list[items.id].status);
         }
 }
