@@ -153,12 +153,14 @@ function changeStatus() {
         if (check[items.id].checked) {
             todo_list[items.id].status = "complete";
             task_description[items.id].style.textDecoration = "line-through";
+            task_description[items.id].style.color = "red";
             console.log(todo_list[items.id].status);
 
         } else {
             items.className = "show"; //Setting back to the previous state
             todo_list[items.id].status = "incomplete";
             task_description[items.id].style.textDecoration = "none";
+            task_description[items.id].style.color = "white";
             console.log(todo_list[items.id].status);
         }
 }
