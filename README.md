@@ -4,3 +4,5 @@ This is a basic CRUD application that can perform Create,Read,Update and Delete 
 1.HTML
 2.CSS
 3.Javascript(vanilla)
+
+Live on : https://sanjaysp2001.github.io/simple-todo-application/
